@@ -112,6 +112,9 @@ listpath( Node, End, Tried, [Node|List] ) :-
    % notice that Distance is a new variable name and will be given a value
    % after the distance function is finished
 
+   % now that we have the distance between two airports we can see how long the
+   % flight is. We know D = R * T but since we want T we do T = D / R to find airtime
+   % the rate is 500 i think and we just found the Distance. So we can get T
 
 
    not( member( Next, Tried )),
