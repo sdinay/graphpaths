@@ -26,6 +26,18 @@ flight( mia, atl, time( 9, 0 ) ).
 not( X ) :- X, !, fail.
 not( _ ).
 
+%
+% Functions
+%
+
+% degrees, minutes to degrees
+degmin_to_degrees( Deg, Min, Degrees ) :-
+   Degrees is Deg + (Min/60).
+
+% degrees to radians
+degrees_to_radians( Degrees, Radians ) :-
+   Pi is pi,
+   Radians is ( Degrees * Pi ) / 180.
 
 %
 % distance_to_from, takes two airports and returns the distance between the two
@@ -37,6 +49,8 @@ distance_to_from( To, From, Distance ) :-
   airport( From, _, degmin(LatD2,LatM2), degmin(LonD2,LonM2) ),
   % here we will do a lot of math so that we can call the haversine formula
 
+  % for example you can use a degmin_to_degrees function to get degrees in fractions
+  degmin_to_degrees( LatD1, LatM1, LatDegs1),
 
 
   % finally once we have lat and lon of both airports in radians we can pass
