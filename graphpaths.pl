@@ -18,22 +18,6 @@ flight( dfw, den, time( 8, 0 ) ).
 flight( atl, lax, time( 8,30 ) ).
 flight( chi, den, time( 8,30 ) ).
 flight( mia, atl, time( 9, 0 ) ).
-%
-% Define the links in the graph.
-%
-
-link( a, b ).
-link( a, d ).
-link( b, c ).
-link( d, e ).
-link( e, c ).
-link( e, f ).
-link( f, a ).
-link( f, g ).
-link( f, j ).
-link( g, h ).
-link( h, i ).
-link( i, j ).
 
 %
 % Prolog version of not.
