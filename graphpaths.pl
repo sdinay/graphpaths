@@ -88,6 +88,9 @@ listpath( Node, End, Outlist ) :-
 % This is where you should do the work to see
 % if the flight time and departure time work out
 
+% add arguments to the listpath function to keep track of time
+% right now listpath only keeps track of where we have reached
+% but time is a factor and it starts at 0
 listpath( Node, Node, _, [Node] ).
 listpath( Node, End, Tried, [Node|List] ) :-
 
