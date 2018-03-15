@@ -68,11 +68,15 @@ distance_to_from( To, From, Distance ) :-
 
 %
 % Find a path from one node to another.
+% This function gets called first
 %
 
 fly( Node, Node ) :-
    write( Node ), write( ' is ' ), write( Node ), nl.
 fly( Node, Next ) :-
+   % add some more arguments so you can keep track of time
+   % for example I had time(0,0) or 0 as one of my arguments
+   % but I used some others two help me keep track of time as well
    listpath( Node, Next, [Node], List ),
    write( Node ), write( ' to ' ), write( Next ), write( ' is ' ),
    writepath( List ),
