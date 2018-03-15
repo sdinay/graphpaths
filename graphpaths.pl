@@ -70,9 +70,9 @@ distance_to_from( To, From, Distance ) :-
 % Find a path from one node to another.
 %
 
-writeallpaths( Node, Node ) :-
+fly( Node, Node ) :-
    write( Node ), write( ' is ' ), write( Node ), nl.
-writeallpaths( Node, Next ) :-
+fly( Node, Next ) :-
    listpath( Node, Next, [Node], List ),
    write( Node ), write( ' to ' ), write( Next ), write( ' is ' ),
    writepath( List ),
