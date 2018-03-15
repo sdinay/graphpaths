@@ -27,8 +27,13 @@ not( X ) :- X, !, fail.
 not( _ ).
 
 %
-% Functions
-%
+% Functions: use functions to return answers to math equations
+% here we are getting degrees as fractions and radians in two formulas
+% You can write a function to give you
+%   hours as a fraction -> hours mins
+%   hours and mins to hours as a fraction
+%   flight time which is Time = Distance / Rate
+%   haversine_radians (but you already have that function, good good)
 
 % degrees, minutes to degrees
 degmin_to_degrees( Deg, Min, Degrees ) :-
