@@ -6,7 +6,7 @@ Included some hints on how I approached this program. Hope it helps
 
 ## Test
 
-fly(atl, lax)
+```fly(atl, lax)```
 
 ## Database
 
